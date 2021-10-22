@@ -1,0 +1,73 @@
+// ===== CONTACT SECTION STYLE ===== //
+.contact-body {
+  @include wrapper(90%, 0 auto);
+  @include flexBox(space-between, flex-start);
+  flex-direction: column;
+  gap: 2rem;
+
+  // MEDIA QUERY
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+// ===== CONTACT FORM ===== //
+.contact-form {
+  @include wrapper(100%, 0 auto);
+  padding: 2rem;
+  background-color: $dark;
+  text-align: center;
+
+  // MEDIA QUERY
+  @include desktop {
+    width: 60%;
+  }
+
+  textarea,
+  .input {
+    width: 100%;
+    outline: none;
+    border-radius: 0.6rem;
+    border: none;
+
+    &::placeholder {
+      font-size: 1.15rem;
+      padding: 0.5em 2em;
+    }
+  }
+
+  .input {
+    min-height: 2.8rem;
+  }
+}
+
+// ===== CONTACT INFO ===== //
+.contact-info {
+  @include flexBox(space-between, center);
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+
+  // MEDIA QUERY
+  @include laptop {
+    flex-direction: row;
+  }
+
+  // MEDIA QUERY
+  @include desktop {
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .info {
+    @include wrapper(100%, 0 auto);
+    padding: 1.5rem;
+    text-align: center;
+    background-color: $dark;
+    color: set-text-color(#000);
+
+    .fa {
+      color: $red;
+    }
+  }
+}

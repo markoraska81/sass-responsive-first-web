@@ -1,0 +1,27 @@
+// ===== SECTION HOME STYLE ===== //
+.home {
+  width: 100%;
+  height: 70vh;
+  @include flexBox(center, center);
+  flex-direction: column;
+  text-align: center;
+  background: {
+    image: url(../img/background.jpg);
+    size: cover;
+    repeat: no-repeat;
+    color: #35424a;
+    blend-mode: overlay;
+  }
+
+  &-banner {
+    @include wrapper(90%, 0 auto);
+  }
+
+  &-desription {
+    font-size: 1rem;
+    max-width: 60rem;
+    margin-right: auto;
+    margin-left: auto;
+    color: set-text-color(#000);
+  }
+}

@@ -1,0 +1,15 @@
+// ===== BASE ===== //
+@import './base/config';
+@import './base/generalStyle';
+@import './base/typography';
+@import './base/background';
+@import './base/btn';
+
+// ===== LAYOUT ===== //
+@import './layout/header';
+@import './layout/home';
+@import './layout/services';
+@import './layout/about';
+@import './layout/contact';
+@import './layout/newsletter';
+@import './layout/footer';

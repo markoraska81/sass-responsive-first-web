@@ -1,0 +1,62 @@
+// ===== SERVICES STYLE ===== //
+.services {
+  @include wrapper(90%, 0 auto);
+
+  &-body {
+    @include flexBox(space-between, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    // MEDIA QUERY
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+}
+
+// ===== SERVICE ===== //
+.service {
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: $ease-in-out;
+
+  // MEDIA QUERY
+  @include mobile {
+    width: 48%;
+    margin-top: 0;
+  }
+
+  @include desktop {
+    width: 23%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover .fab {
+    transform: scale(1.2);
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .fab {
+    font-size: 6.25rem;
+    transition: $ease-in-out;
+  }
+
+  @each $name, $color in $color-icons {
+    .#{$name} {
+      color: $color;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+// ===== HEADER STYLE ===== //
+header {
+  background-color: $dark;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid $red;
+}
+
+// ===== NAVBAR BRAND ===== //
+.navbar-brand img {
+  width: 50px;
+
+  // MEDIA QUERY
+  @include tablet {
+    width: initial;
+  }
+}
+
+// ===== NAVBAR ===== //
+.navbar {
+  @include flexBox(space-between, center);
+  @include wrapper(90%, 0 auto);
+}
+
+// ===== NAVBAR MENU ===== //
+.navbar-menu {
+  display: none;
+  gap: 1rem;
+
+  // MEDIA QUERY
+  @include laptop {
+    display: flex;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: $ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+
+    &.active {
+      color: $red;
+    }
+  }
+}
+
+// ===== NAVBAR ACTION ===== //
+.navbar-action {
+  @include flexBox(center, center);
+  gap: 1rem;
+}
+
+// ===== NAVBAR SEARCH ===== //
+.navbar-search {
+  @include flexBox(center, center);
+  gap: 1rem;
+  color: set-text-color(#000);
+
+  &__icon {
+    font-size: 1.2rem;
+  }
+
+  &__text {
+    display: none;
+
+    // MEDIA QUERY
+    @include laptop {
+      display: flex;
+    }
+  }
+}
+
+// ===== NAVBAR BTN ===== //
+.navbar-btn {
+  display: block;
+
+  // MEDIA QUERY
+  @include laptop {
+    display: none;
+  }
+
+  .menu-btn {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 9999999999999;
+
+    &__line {
+      width: 30px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: #fff;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

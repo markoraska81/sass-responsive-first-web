@@ -1,0 +1,63 @@
+// ===== ABOUT SECTION STYLE ===== //
+.about {
+  &-body {
+    display: flex;
+    flex-direction: column;
+
+    // MEDIA QUERY
+    @include laptop {
+      flex-direction: row;
+    }
+  }
+}
+
+// ===== ARTICLE ===== //
+.article {
+  background: {
+    image: url(../img/background.jpg);
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+    color: #35424a;
+    blend-mode: overlay;
+  }
+  padding: 4rem 2rem;
+  text-align: center;
+  color: set-text-color(#000);
+
+  // MEDIA QUERY
+  @include laptop {
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
+
+.article > * {
+  // mEDIA QUERY
+  @include laptop {
+    max-width: 40rem;
+    margin-left: auto;
+  }
+}
+
+// ===== SIDEBAR ===== //
+.sidebar {
+  background-color: darken($dark, 15);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: set-text-color(#000);
+
+  // MEDIA QUERY
+  @include laptop {
+    flex-basis: 50%;
+    text-align: left;
+  }
+}
+
+.sidebar > * {
+  // mEDIA QUERY
+  @include laptop {
+    max-width: 40rem;
+    margin-left: auto;
+  }
+}

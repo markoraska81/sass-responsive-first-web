@@ -1,0 +1,61 @@
+// ===== SECTION NEWSLETTER STYLE ===== //
+.newsletter {
+  background-color: $dark;
+  border-bottom: 1px solid $gray;
+
+  &-body {
+    @include wrapper(90%, 0 auto);
+    @include flexBox(space-between, center);
+    flex-direction: column;
+    gap: 1rem;
+
+    // MEDIA QUERY
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include desktop {
+      flex-direction: row;
+    }
+
+    .section-heading {
+      color: set-text-color(#000);
+      margin-bottom: 0;
+    }
+  }
+
+  &-form {
+    @include wrapper(90%, 0 auto);
+    @include flexBox(space-between, center);
+    flex-direction: column;
+    gap: 0.5rem;
+
+    // MEDIA QUERY
+    @include tablet {
+      gap: 1rem;
+      flex-direction: row;
+    }
+
+    @include desktop {
+      width: 50%;
+    }
+
+    input {
+      width: 100%;
+      min-height: 2.8rem;
+      outline: none;
+      padding: 0 2em;
+      border-radius: 0.6rem;
+      border: none;
+
+      // MEDIA QUERY
+      @include desktop {
+        width: 80%;
+      }
+
+      &::placeholder {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

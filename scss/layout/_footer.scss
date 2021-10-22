@@ -1,0 +1,53 @@
+// ===== FOOTER STYLE ===== //
+.footer {
+  background-color: $dark;
+  padding: 3rem 0 0;
+  color: set-text-color(#000);
+}
+
+// ===== SOCIAL MENU ===== //
+.social-menu {
+  @include flexBox(center, center);
+  flex-direction: row;
+  margin-bottom: 2rem;
+
+  &__item {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .fab {
+    font-size: 2.2rem;
+    color: #a1a1a1;
+    transition: $ease-in-out;
+  }
+
+  @each $name, $color in $hover-color-icons {
+    .#{$name}:hover,
+    .#{$name}:focus {
+      color: $color;
+    }
+  }
+}
+
+// ===== COPYRIGHT ===== //
+.copyright {
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: darken($dark, 15);
+  line-height: 1;
+
+  // MEDIA QUERY
+  @include laptop {
+    text-align: left;
+  }
+
+  &-text {
+    @include wrapper(90%, 0 auto);
+  }
+}
