@@ -13,6 +13,7 @@
 
 // ===== SECTION TITLE, DESCRIPTION ===== //
 .section-heading {
+  @include wrapper(90%, 0 auto);
   margin-bottom: 2rem;
 
   &__title {
